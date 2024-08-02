@@ -1,0 +1,178 @@
+:root {
+    --gray-200: #E5E2E9;
+    --purple-base: #9359F3;
+    --font-family: 'Inter', sans-serif;
+    --button-font: bold 14px/160% var(--font-family); 
+}
+
+* {
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+/*CSS header*/
+
+header {
+    display: flex;
+    height: 200px;
+    width: 100%;
+    background-color:var(--gray-200);
+    align-items: center;
+    justify-content: center;
+}
+
+/*ADICIONE UMA NOVA TAREFA CSS*/
+
+/* CSS BUTTON*/
+.btn-add {
+    width: 110px;
+    height: 52px;
+    border-radius: 8px;
+    background-color: blueviolet;
+    border: 0px;
+    font: var(--button-font);
+    color: white;
+}
+
+.btn-add:hover {
+    background-color: var(--purple-base);
+}
+
+.add-icon {
+    display: inline-block;
+    width: 16.25px;
+    height: 16.25px;
+}
+
+
+
+
+.margin10 {
+    margin-left: 10px;
+}
+
+/* fim CSS BUTTON*/
+
+
+
+/* CSS GERAL DE ALINHAMENTO*/
+.flex-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.forms-flex {
+    display: flex;
+    gap: 8px;
+    margin-top: -20px;
+}
+
+.forms-div {
+
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+/*FIM CSS GERAL DE ALINHAMENTO*/
+
+
+
+/* CSS TEXT INPUT*/
+
+.add-taskinput {
+    width: 736px;
+    height: 52px;
+    border-radius: 8px;
+    border: 2px solid #E0DCE4;
+    padding-left: 20px;
+}
+
+
+input[type="text"]:focus {
+    outline: none;
+    border: 2px solid #9359F3;
+}
+
+/* FIM CSS TEXT INPUT*/
+
+
+/* FIM CSS ADICIONAR UMA NOVA TAREFA*/
+
+
+
+
+
+
+
+/* CSS DASHBOARD TAREFAS*/
+
+
+.tarefas-display {
+    margin-inline: center;
+    margin-top: 100px; /*teste de viulização*/
+
+}
+
+.status-tarefas {
+
+    height: 22px;
+}
+
+.flex-displaycontent {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*FIM DASHBOARD TAREFAS*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* FIM TEXT INPUT*/
+
+
+
