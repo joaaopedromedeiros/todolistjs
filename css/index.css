@@ -383,39 +383,25 @@ br {
 ul li span {
     position: absolute;
     right: 0;
-    top: 13.5px;
+    top: 15px;
     width: 40px;
-    height: 40px;
+    height: 60px;
     border-radius: 20px;
     font-size: 22px;
     color: #555;
     line-height: 40px;
     text-align: center;
-    z-index: 2;
 }
 
-ul li span:hover {
-    background-color: #edeef0;
-    background-image: url(assets/position-assets/hover-delete.png);
-    background-size: cover;
-    width: 30px;
-    height: 30px;
-    right: 7.3px;
-    top: 22px;
-    background-position: center;
-    z-index: 2;
-
-   2
-
+ul li {
+    display: flex;
 }
 
-ul li span img:hover {
-    opacity: 0.01;
-    width: 50px;
-    height: 50px;
-    top: -20px;
-    z-index: -1;
+ul li #uncheck {
+    position: relative;
+    right: 98.3%;
 }
+
 
 
 
@@ -471,6 +457,11 @@ ul li span img:hover {
 
 .card-concluido {
     padding: 10px;
+}
+
+ul li #uncheck {
+    position: relative;
+    right: 95%;
 }
 
 

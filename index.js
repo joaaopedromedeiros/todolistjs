@@ -26,11 +26,17 @@ function addTask() {
   }
   else{
     let li = document.createElement("li")
-    li.innerHTML = inputBox.value;
+    li.innerHTML = `<p>${inputBox.value}</p>`;
     li.classList.add('card-concluir')
     li.id = 'check';
     listContainer.appendChild(li);
 
+    let addCheckBox = document.createElement('input');
+    addCheckBox.type='checkbox';
+    addCheckBox.id = 'uncheck';
+    li.appendChild(addCheckBox);
+
+    // como adiicionar o check assim com createElement igual a imagem do trash? Ai ao click add 1, ao  unclick -1. ????  
 
     let span = document.createElement("span");
     span.innerHTML = '<img src="css/assets/position-assets/trashRegular.png" >'
@@ -74,17 +80,29 @@ botao.addEventListener('click',
 )
 
 
-const li2 = document.querySelector('.tarefas-display')
+const check = document.getElementById('uncheck')
 let spanConcluidas = document.getElementById("contagem")
 var numeroDeConcluidas = 0;
 
-li2.addEventListener('click', 
+check.addEventListener('change', 
   function() {
-    numeroDeConcluidas++/2;
-    somaConcluidas = numeroDeConcluidas;
-    spanConcluidas.textContent = `${somaConcluidas}`;
+
+    if (this.checked) {
+      numeroDeConcluidas++;
+      somaConcluidas = numeroDeConcluidas;
+      spanConcluidas.textContent = `${somaConcluidas}`;
+    } else {
+      numeroDeConcluidas--;
+      somaConcluidas = numeroDeConcluidas;
+      spanConcluidas.textContent = `${somaConcluidas}`;
+    }
+    
   }
 )
+
+// como adiicionar o check assim com createElement igual a imagem do trash? Ai ao click add 1, ao  unclick -1. ????  
+// Corrigir o botão delete 
+// Concluidas display, a ul j´´a seleciona apenas nas li
 
 
 
