@@ -397,7 +397,7 @@ ul li {
     display: flex;
 }
 
-ul li #uncheck {
+ul li .uncheck {
     position: relative;
     right: 98.3%;
 }
@@ -457,11 +457,6 @@ ul li #uncheck {
 
 .card-concluido {
     padding: 10px;
-}
-
-ul li #uncheck {
-    position: relative;
-    right: 95%;
 }
 
 
