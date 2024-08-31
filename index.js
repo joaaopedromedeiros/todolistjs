@@ -23,25 +23,11 @@ function addTask() {
     li.innerHTML = `<p>${inputBox.value}</p>`;
     li.classList.add("card-concluir");
     li.id = "check";
+    li.setAttribute('onclick','removecheck');
     listContainer.appendChild(li);
 
-    let addCheckBox = document.createElement("input");
-    addCheckBox.type = "checkbox";
-    addCheckBox.className = "uncheck"; 
 
-    addCheckBox.addEventListener("change", function () {
-      if (this.checked) {
-        numeroDeConcluidas++;
-        somaConcluidas = numeroDeConcluidas;
-        spanConcluidas.textContent = `${somaConcluidas}`;
-      } else {
-        numeroDeConcluidas--;
-        somaConcluidas = numeroDeConcluidas;
-        spanConcluidas.textContent = `${somaConcluidas}`;
-      }
-    });
 
-    li.appendChild(addCheckBox);
 
 
 
@@ -51,20 +37,40 @@ function addTask() {
     nenhumaTarefa.classList.add("display-none");
   }
 
+
   inputBox.value = "";
 }
+
+
 
 listContainer.addEventListener(
   "click",
   function (e) {
     if (e.target.tagName === "LI") {
       e.target.classList.toggle("card-concluido");
+
+      numeroDeConcluidas++;
+      somaConcluidas = numeroDeConcluidas;
+      spanConcluidas.textContent = `${somaConcluidas}`;
+
+
     } else if (e.target.tagName === "SPAN") {
       e.target.parentElement.remove();
+
+      
+      numeroDeConcluidas--;
+      somaConcluidas = numeroDeConcluidas;
+      spanConcluidas.textContent = `${somaConcluidas}`;
+
+      numeroDeCriadas--;
+      somaCriadas = numeroDeCriadas;
+      numerosCriadas.textContent = `${somaCriadas}`;
+
     }
   },
   false
 );
+
 
 // Add numeros de criadas & Removidas
 
@@ -73,6 +79,7 @@ botao.addEventListener("click", function () {
   somaCriadas = numeroDeCriadas;
   numerosCriadas.textContent = `${somaCriadas}`;
 });
+
 
 
 
